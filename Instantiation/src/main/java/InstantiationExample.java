@@ -17,7 +17,8 @@ public class InstantiationExample {
      *
      * @return any object.
      */
+    String object = new String();
     public Object instantiateANewObject(){
-        return null;
+        return object;
     }
 }
