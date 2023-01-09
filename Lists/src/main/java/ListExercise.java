@@ -30,6 +30,7 @@ public class ListExercise {
      * @return a List<Integer> object.
      */
     public List<Integer> createList(int n){
+    
         return n;
     }
 
@@ -39,8 +40,8 @@ public class ListExercise {
      * @param list a List<Integer> object.
      * @return the size of List (number of items it holds.)
      */
-    public int getSize(List<Integer> list){
-        return 0;
+    public int getSize(ArrayList<Integer> list){
+        return list.size();
     }
 
     /**
@@ -51,8 +52,10 @@ public class ListExercise {
      * @param value an integer that we would like to add to list.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void addToList(List<Integer> list, int value){
+    public void addToList(ArrayList<Integer> list, Integer value){
+        
     }
+    
 
     /**
      * Get a particular index of a list.
@@ -67,7 +70,8 @@ public class ListExercise {
      * @return the int at the location in 'list' represented by 'index'.
      */
     public int get(List<Integer> list, int index){
-        return 0;
+       int pos = list.indexOf(index);
+        return (pos);
     }
 
     /**
@@ -80,6 +84,7 @@ public class ListExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeFromList(List<Integer> list, int position){
+        list.remove(position);
 
     }
 
@@ -93,5 +98,6 @@ public class ListExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void updateAtPosition(List<Integer> list, int position, int value){
+        list.set(position, value);
     }
 }
