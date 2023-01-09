@@ -29,8 +29,8 @@ public class ListExercise {
      *
      * @return a List<Integer> object.
      */
-    public List<Integer> createList(){
-        return null;
+    public List<Integer> createList(int n){
+        return n;
     }
 
     /**
