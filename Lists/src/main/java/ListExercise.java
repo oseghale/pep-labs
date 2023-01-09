@@ -29,10 +29,11 @@ public class ListExercise {
      *
      * @return a List<Integer> object.
      */
-    public List<Integer> createList(int n){
-    
-        return n;
+    public List<Integer> createList(){
+        List<Integer> createList = new ArrayList<>();
+        return createList; 
     }
+    
 
     /**
      * Get the size of a list.
@@ -40,7 +41,7 @@ public class ListExercise {
      * @param list a List<Integer> object.
      * @return the size of List (number of items it holds.)
      */
-    public int getSize(ArrayList<Integer> list){
+    public int getSize(List<Integer> list){
         return list.size();
     }
 
@@ -50,12 +51,15 @@ public class ListExercise {
      *
      * @param list a List<Integer> object that we would like to modify.
      * @param value an integer that we would like to add to list.
+     * @return 
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void addToList(ArrayList<Integer> list, Integer value){
-        
+    public void addToList(List<Integer> list, int value){
+       //addToList add = new addToList();
+        list.add(value);   
     }
     
+
 
     /**
      * Get a particular index of a list.
@@ -70,8 +74,7 @@ public class ListExercise {
      * @return the int at the location in 'list' represented by 'index'.
      */
     public int get(List<Integer> list, int index){
-       int pos = list.indexOf(index);
-        return (pos);
+        return list.get(index);
     }
 
     /**
