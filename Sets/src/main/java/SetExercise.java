@@ -1,4 +1,5 @@
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -20,7 +21,8 @@ public class SetExercise {
      * @return a new Set<Integer> object.
      */
     public Set<Integer> createSet(){
-        return null;
+        HashSet<Integer> createSet = new HashSet<>();
+        return createSet;
     }
 
     /**
@@ -28,8 +30,9 @@ public class SetExercise {
      * @param set The set that we will be manipulating.
      * @return the size of set. (number of values)
      */
-    public int getSize(Set<Integer> set){
-        return 0;
+    public int getSize(Set<Integer> set){ 
+        HashSet<set> createSet = new HashSet<>();
+        return createSet.size();
     }
 
     /**
