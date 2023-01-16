@@ -1,0 +1,1 @@
+insert into song (title, Artist) values ('Oh My God', 'Juice'), ('Trans', 'Cult');
