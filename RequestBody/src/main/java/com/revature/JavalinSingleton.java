@@ -16,8 +16,14 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
-        app.post("/problem1", ctx -> {
+        app.post("/song", ctx -> {
                 //implement logic here
+                // Parse the JSON request body
+                Song song = ctx.bodyAsClass(Song.class);
+                // Extract the artist name from the song object
+                String artistName = song.getArtistName();
+                // Return the artist name
+                ctx.result(artistName);
         });
 
         /**
@@ -27,8 +33,14 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
-        app.post("/problem2", ctx -> {
-               //implement logic here
+        app.post("/song", ctx -> {
+                //implement logic here
+                // Parse the JSON request body
+                Song song = ctx.bodyAsClass(Song.class);
+                // Update the artist in the song object
+                song.setArtistName("Beatles");
+                // Return the updated song object in the response body
+                ctx.json(song);
         });
 
 
