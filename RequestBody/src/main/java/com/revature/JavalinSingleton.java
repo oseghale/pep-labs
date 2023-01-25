@@ -18,10 +18,11 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
-        app.post("/song", ctx -> {
+        app.post("/problem1", ctx -> {
+            String jasonString = ctx.body();
                ObjectMapper om = new ObjectMapper();
-               String artistName = ctx.body();
-               Song song = om.readValue(artistName, Song.class);
+               
+               Song song = om.readValue(jasonString, Song.class);
                   //we need to let the request know we will send back json in the body
             // ctx.contentType("application/json"); 
                 //implement logic here
@@ -30,9 +31,9 @@ public class JavalinSingleton {
                 
                 
                 // Extract the artist name from the song object
-                song.getArtistName();
+                String name = song.getArtistName();
                 // Return the artist name
-                ctx.result(artistName);
+                ctx.result(name);
         });
 
         /**
@@ -42,14 +43,23 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
-        app.post("/song", ctx -> {
-                //implement logic here
-                // Parse the JSON request body
-                Song song = ctx.bodyAsClass(Song.class);
-                // Update the artist in the song object
-                song.setArtistName("Beatles");
-                // Return the updated song object in the response body
-                ctx.json(song);
+        app.post("/problem2", ctx -> {
+            String jasonString = ctx.body();
+            ObjectMapper om = new ObjectMapper();
+            
+            Song song = om.readValue(jasonString, Song.class);
+               //we need to let the request know we will send back json in the body
+         // ctx.contentType("application/json"); 
+             //implement logic here
+             // Parse the JSON request body
+             //Song song = ctx.bodyAsClass(Song.class);
+             
+             
+             // Extract the artist name from the song object
+             song.setArtistName("Beatles");
+             String jsonStringToBeReturned = om.writeValueAsString(song);
+             // Return the artist name
+             ctx.result(jsonStringToBeReturned);
         });
 
 

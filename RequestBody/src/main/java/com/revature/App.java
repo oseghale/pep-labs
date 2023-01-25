@@ -1,7 +1,5 @@
 package com.revature;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import io.javalin.Javalin;
 
 /*
