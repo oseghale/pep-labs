@@ -1,5 +1,7 @@
 package com.revature;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import io.javalin.Javalin;
 
 /**
@@ -17,11 +19,18 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/song", ctx -> {
+               ObjectMapper om = new ObjectMapper();
+               String artistName = ctx.body();
+               Song song = om.readValue(artistName, Song.class);
+                  //we need to let the request know we will send back json in the body
+            // ctx.contentType("application/json"); 
                 //implement logic here
                 // Parse the JSON request body
-                Song song = ctx.bodyAsClass(Song.class);
+                //Song song = ctx.bodyAsClass(Song.class);
+                
+                
                 // Extract the artist name from the song object
-                String artistName = song.getArtistName();
+                song.getArtistName();
                 // Return the artist name
                 ctx.result(artistName);
         });
