@@ -49,7 +49,7 @@ public class JavalinSingleton {
             
             Song song = om.readValue(jasonString, Song.class);
                //we need to let the request know we will send back json in the body
-         // ctx.contentType("application/json"); 
+          ctx.contentType("application/json"); 
              //implement logic here
              // Parse the JSON request body
              //Song song = ctx.bodyAsClass(Song.class);
