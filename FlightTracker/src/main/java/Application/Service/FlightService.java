@@ -2,8 +2,6 @@ package Application.Service;
 
 import Application.Model.Flight;
 import Application.DAO.FlightDAO;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -46,7 +44,7 @@ public class FlightService {
      *         inform our provide the front-end client with information about the added Flight.
      */
     public Flight addFlight(Flight flight){
-        return null;
+        return flightDAO.insertFlight(flight);
     }
 
     /**
@@ -81,7 +79,7 @@ public class FlightService {
      * @return all flights in the database.
      */
     public List<Flight> getAllFlights() {
-        return null;
+        return flightDAO.getAllFlights();
     }
 
     /**
@@ -94,6 +92,6 @@ public class FlightService {
      */
     public List<Flight> getAllFlightsFromCityToCity(String departure_city, String arrival_city) {
         
-        return null;
+        return flightDAO.getAllFlightsFromCityToCity(departure_city, arrival_city);
     }
 }
