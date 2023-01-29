@@ -3,6 +3,7 @@ package Application.Service;
 import Application.Model.Flight;
 import Application.DAO.FlightDAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -92,6 +93,7 @@ public class FlightService {
      * @return all flights departing from departure_city and arriving at arrival_city.
      */
     public List<Flight> getAllFlightsFromCityToCity(String departure_city, String arrival_city) {
+        
         return null;
     }
 }
