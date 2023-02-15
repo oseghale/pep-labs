@@ -10,9 +10,14 @@ public class OtherStringMethods {
      * @param end the index of the end of the substring, exclusive.
      * @return
      */
-    public String partOfString(String s, int start, int end){
-        return "";
+    public String partOfString(String s, int start, int end) {
+        if (start < 0 || end > s.length() || start >= end) {
+            return ""; // return an empty string if start/end indices are invalid
+        } else {
+            return s.substring(start, end); // return the substring
+        }
     }
+    
 
     /**
      * All classes have methods equals and toString because they inherit them from the Object class by extending the
@@ -25,9 +30,10 @@ public class OtherStringMethods {
      * @return a number greater than 0 if s1 > s2 lexigraphically, a number less than 0 is s1 < s2 lexigraphically,
      * and 0 if s1 is equivalent to s2.
      */
-    public int compareLexigraphically(String s1, String s2){
-        return 0;
+    public int compareLexigraphically(String s1, String s2) {
+        return s1.compareTo(s2);
     }
+    
 
     /**
      * The split method is useful for dividing a string into multiple strings, most notably for dividing a sentence
@@ -38,7 +44,8 @@ public class OtherStringMethods {
      *                    words we use " ".
      * @return an array of Strings that represent s1 split by splitAround.
      */
-    public String[] splitStringIntoMultipleStrings(String s1, String splitAround){
-        return null;
+    public String[] splitStringIntoMultipleStrings(String s1, String splitAround) {
+        return s1.split(splitAround);
     }
+    
 }
