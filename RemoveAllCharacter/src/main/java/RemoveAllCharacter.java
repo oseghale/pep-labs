@@ -11,7 +11,7 @@ public class RemoveAllCharacter {
      * @param ch A string containing a single character which should be removed from str.
      * @return str, without any characters of type ch.
      */
-    public String removeAll(String str, String ch){
-        return null;
-    }
+    public String removeAll(String str, String ch) {
+        return str.replace(ch, "");
+    }    
 }
