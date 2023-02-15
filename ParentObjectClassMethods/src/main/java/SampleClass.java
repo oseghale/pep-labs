@@ -56,9 +56,27 @@ public class SampleClass {
     public boolean b;
 
     //    implement a custom .equals(SampleClass other){} method here.
-
-
-    //    implement a custom .toString(){} method here.
+    public boolean equals(SampleClass other) {
+    if (this == other) {  // if the objects are the same instance
+        return true;
+    }
+    if (other == null) {  // if the other object is null
+        return false;
+    }
+    if (this.getClass() != other.getClass()) {  // if the objects are not of the same class
+        return false;
+    }
+    // compare the values of the instance variables
+    return this.a == other.a && this.b == other.b;
+}
 
     
+    //    implement a custom .toString(){} method here.
+
+    public String toString() {
+        return "a: " + this.a + ", b: " + this.b;
+    }
+    
+
 }
+
